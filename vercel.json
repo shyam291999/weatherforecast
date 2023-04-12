@@ -2,7 +2,7 @@
     "version":2,
     "builds": [
         {
-            "src": "weather/wsgi.py",
+            "src": "src/weather/wsgi.py",
             "use": "@vercel/python",
             "config": {"maxLambdaSize": "15mb", "runtime":"python3.10"}
         },
@@ -22,7 +22,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "poll/wsgi.py"
+            "dest": "src/weather/wsgi.py"
         }
     ]
 }
